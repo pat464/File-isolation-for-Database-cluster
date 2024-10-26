@@ -7,7 +7,7 @@ lifecycle{
     prevent_destroy = true
     }  
 }
-#Enable bucket versioning for fallback mechanisms on state files
+#Enable S3 bucket versioning for fallback mechanisms on state files
 resource "aws_s3_bucket_versioning" "enabled" {
 bucket = aws_s3_bucket.terraform_state.id
 versioning_configuration {
